@@ -3,11 +3,11 @@
 
 import { Detector } from './Detector.js'
 import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 //import { MTLLoader } from 'three/addons/loaders/MTLLoader';
 //import { OBJLoader } from 'three/addons/loaders/OBJLoader';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader'
-import Stats from 'three/addons/libs/stats.module'
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+//import Stats from 'three/addons/libs/stats.module'
 
 // Write your JavaScript code.
 if (!Detector.webgl) {
@@ -19,8 +19,8 @@ var container;
 var camera, controls, scene, renderer;
 var lighting, ambient, keyLight, fillLight, backLight;
 
-const stats = new Stats()
-document.body.appendChild(stats.dom)
+//const stats = new Stats()
+//document.body.appendChild(stats.dom)
 
 var clock;
 var action;
@@ -184,7 +184,7 @@ function animate() {
 
     mixer.update(mixerUpdateDelta);
 
-    stats.update()
+    //stats.update()
 
     render();
 }
