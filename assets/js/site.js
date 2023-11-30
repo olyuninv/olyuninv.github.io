@@ -66,7 +66,7 @@ function init() {
     /* Model */
 
     var loader = new GLTFLoader();
-    loader.load('assets/js/vologram_20.glb', function (gltf) {
+    loader.load('assets/images/vologram_20.glb', function (gltf) {
         var model = gltf.scene;
         model.rotation.y += 0.1;
         model.rotation.x += 0.1;
