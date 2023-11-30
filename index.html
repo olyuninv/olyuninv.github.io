@@ -26,7 +26,7 @@
 </head>
 <body>
     <!--Navigation-->
-    <div class="w3-bar w3-black w3-hide-small">
+    <div class="w3-bar w3-black">
         <div class="logo">
             <a href="https://www.facebook.com/volyunina" class="w3-bar-item"><i class="fa fa-facebook-official"></i></a>
             <a href="https://www.linkedin.com/in/valeria-olyunina-a9322584/" class="w3-bar-item"><i class="fa fa-linkedin"></i></a>
@@ -38,25 +38,28 @@
         </ul>
     </div>
     <!--/Navigation-->
-
     <!--Main screen-->
-    <section class="section gray-bg" id="about">
-        <div class="w3-row w3-padding w3-border gray-bg">
-            <div class="about-list">                
-                <div class="w3-col l8 s12 align-items-center">
-                    <img class="is-rounded" src="assets/images/me7.PNG" title="" alt="">
-                </div>
-                <div class="w3-col l4 align-items-center about-text">
-                    <h3 class="dark-color">Valeria Olyunina</h3>
-                    <h6 class="theme-color lead">3D Computer Vision Engineer &amp; Unity Game Developer </h6>
-                    <p class="dark-color">I am a Deep-learning Engineer specialising in Computer Vision. I led deep-learning developement team at Volograms Ltd, working on shape-estimation, semantic segmentation, pose estimation, normals and depth.</p>
+    <!-- w3-content defines a container for fixed size centered content,
+    and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content" style="max-width:1600px">
+        <section class="section gray-bg" id="about">
+            <div class="w3-row w3-padding w3-border gray-bg">
+                <div class="about-list">
+                    <div class="w3-col l8 s12 align-items-center">
+                        <img class="is-rounded" src="assets/images/me7.PNG" title="" alt="">
+                    </div>
+                    <div class="w3-col l4 align-items-center about-text">
+                        <h3 class="dark-color">Valeria Olyunina</h3>
+                        <h6 class="theme-color lead">3D Computer Vision Engineer &amp; Unity Game Developer </h6>
+                        <p class="dark-color">I am a Deep-learning Engineer specialising in Computer Vision. I led deep-learning developement team at Volograms Ltd, working on shape-estimation, semantic segmentation, pose estimation, normals and depth.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="canvas-container"></div>
-    </section>
+            <h3 class="dark-color lead align-items-center">Rotate me<img src="assets/images/3d-rotate-icon_sm.png" title="" alt=""></h3>
+            <div id="canvas-container"></div>
+        </section>
 
-    <!--<div class="container">
+        <!--<div class="container">
            <div class="row align-items-center flex-row-reverse">
                <div>
                    <div class="about-text go-to">
@@ -74,7 +77,7 @@
         </div>
     </div>
     </div>-->
-    <!--<div class="counter">
+        <!--<div class="counter">
         <div class="row">
             <div class="col-6 col-lg-3">
                 <div class="count-data text-center">
@@ -101,19 +104,20 @@
                 </div>
             </div>
         </div>
-    </div>-->   
+    </div>-->
+    </div>
+        <!-- Footer -->
+        <footer class="w3-container w3-dark-grey" style="padding:32px">
+            <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </footer>
+     
 
-    <!-- Footer -->
-    <footer class="w3-container w3-dark-grey" style="padding:32px">
-        <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/controls/OrbitControls.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/loaders/GLTFLoader.js" type="module"></script>-->
-    -->
-    <script src="assets/js/Detector.js" type="module"></script>
-    <script src="assets/js/site.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/controls/OrbitControls.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/loaders/GLTFLoader.js" type="module"></script>-->
+        -->
+        <script src="assets/js/Detector.js" type="module"></script>
+        <script src="assets/js/site.js" type="module"></script>
 </body>

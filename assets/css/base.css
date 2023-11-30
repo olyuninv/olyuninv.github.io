@@ -146,6 +146,10 @@ mark {
     border-radius: 50%;
 }
 
+.align-items-center {
+    text-align: center;
+}
+
 #canvas-container {
     /*    float: left;
     position: absolute;
@@ -239,9 +243,6 @@ a {
 /* ================================= 
   Media Queries
 ==================================== */
-
-
-
 
 @media (min-width: 769px) {
     .header,
