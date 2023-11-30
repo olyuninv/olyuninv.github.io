@@ -37,8 +37,8 @@ function init() {
     
     /* Camera */
 
-    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 250);
-    camera.position.z = 5;    
+    camera = new THREE.PerspectiveCamera(45, 1, 1, 250);
+    camera.position.z = 3;    
 
     clock = new THREE.Clock();
 
@@ -59,6 +59,7 @@ function init() {
     var loader = new GLTFLoader();
     loader.load('assets/images/vologram_20.glb', function (gltf) {
         var model = gltf.scene;
+        model.position.y -= 1;
         model.rotation.y += 0.1;
         model.rotation.x += 0.1;
         scene.add(model);
@@ -100,14 +101,15 @@ function init() {
 
     /* Renderer */
     renderer = new THREE.WebGLRenderer();
-    renderer.setPixelRatio(window.devicePixelRatio);
-    var aspectRatio = window.innerWidth / window.innerHeight;
-    //renderer.setSize(window.innerWidth, window.innerHeight); //aspectRatio * 500, 500);
+    renderer.setPixelRatio(window.devicePixelRatio);    
+    //renderer.setSize(window.innerWidth, window.innerHeight); //aspectRatio * 500, 500);    
     var w = container.offsetWidth;
-    var h = container.offsetWidth/ aspectRatio; // container.offsetHeight;
+    var h = container.offsetWidth; // container.offsetHeight;
+    camera.aspect = w / h;
     renderer.setSize(w, h);
     renderer.shadowMap.enabled = true;
     renderer.setClearColor(new THREE.Color("hsl(0, 0%, 96%)"));
+
     container.appendChild(renderer.domElement);
 
     /* Controls */
@@ -123,16 +125,19 @@ function init() {
     /* Events */
 
     window.addEventListener('resize', onWindowResize, false);
-    window.addEventListener('keydown', onKeyboardEvent, false);
-
 }
 
 function onWindowResize() {
 
-    camera.aspect = window.innerWidth / window.innerHeight;
+    var aspectRatio = 1; //window.innerWidth / window.innerHeight;
+    camera.aspect = aspectRatio;
+    var w = container.offsetWidth;
+    var h = container.offsetWidth;
+
     camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    //renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(w, h);
     render()
 }
 function animate() {

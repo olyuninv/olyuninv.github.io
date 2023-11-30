@@ -1,5 +1,5 @@
 body {
-    color: #6F8BA4;
+    color: #f4f4f4;
     margin-top: 20px;
 }
 
@@ -23,6 +23,7 @@ img {
 /* About Me 
 ---------------------*/
 .about-text h3 {
+    font-size: 45px;
     font-size: 45px;
     font-weight: 700;
     margin: 0 0 6px;
@@ -149,9 +150,12 @@ mark {
     /*    float: left;
     position: absolute;
     left: 0px;*/
-    width: 800px; /* or whatever width you want. */
-    max-width: 800px; /* or whatever width you want. */
-    display: inline-block;
+    /* width: 800px; or whatever width you want. */
+    width: 25%;
+    /*float:left;*/
+    max-width: 800px; /* or whatever width you want. display: inline-block;*/
+    min-width: 300px;
+    margin: auto;
 }
 
 /* Navigation */
