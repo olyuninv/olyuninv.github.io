@@ -52,16 +52,7 @@ function init() {
 
     const light = new THREE.PointLight(0xffffff, 1000)
     light.position.set(2.5, 7.5, 15)
-    scene.add(light)
-
-    keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
-    keyLight.position.set(-100, 0, 100);
-
-    fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
-    fillLight.position.set(100, 0, 100);
-
-    backLight = new THREE.DirectionalLight(0xffffff, 1.0);
-    backLight.position.set(100, 0, -100).normalize();
+    scene.add(light)    
 
     /* Model */
 
@@ -71,7 +62,6 @@ function init() {
         model.rotation.y += 0.1;
         model.rotation.x += 0.1;
         scene.add(model);
-
         model.traverse(function (object) {
 
             if (object.isMesh) object.castShadow = true;
@@ -117,7 +107,7 @@ function init() {
     var h = container.offsetWidth/ aspectRatio; // container.offsetHeight;
     renderer.setSize(w, h);
     renderer.shadowMap.enabled = true;
-    renderer.setClearColor(new THREE.Color("hsl(0, 0%, 10%)"));
+    renderer.setClearColor(new THREE.Color("hsl(0, 0%, 96%)"));
     container.appendChild(renderer.domElement);
 
     /* Controls */
@@ -145,33 +135,6 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     render()
 }
-
-function onKeyboardEvent(e) {
-
-    if (e.code === 'KeyL') {
-
-        lighting = !lighting;
-
-        if (lighting) {
-
-            ambient.intensity = 0.25;
-            scene.add(keyLight);
-            scene.add(fillLight);
-            scene.add(backLight);
-
-        } else {
-
-            ambient.intensity = 1.0;
-            scene.remove(keyLight);
-            scene.remove(fillLight);
-            scene.remove(backLight);
-
-        }
-
-    }
-
-}
-
 function animate() {
 
     requestAnimationFrame(animate);

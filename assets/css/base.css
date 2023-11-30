@@ -146,9 +146,9 @@ mark {
 }
 
 #canvas-container {
-    /*    float: left;*/
+    /*    float: left;
     position: absolute;
-    left: 0px;
+    left: 0px;*/
     width: 800px; /* or whatever width you want. */
     max-width: 800px; /* or whatever width you want. */
     display: inline-block;
