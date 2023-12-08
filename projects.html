@@ -10,6 +10,7 @@
     <meta property="og:image" content="assets/images/me7.PNG" />
     <meta property="og:url" content="https://olyuninv.github.io/" />
     <title>Valeria Olyunina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/base.css" id="mode">
@@ -31,52 +32,49 @@
     <!-- w3-content defines a container for fixed size centered content,
     and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1600px">
-        <section class="section gray-bg" id="about">
-            <div class="row align-items-center flex-row-reverse">                    
-                <div class="news-list">
-                    <div class="news-item">
-                        <div class="news-image">
-                            <iframe width="500" height="375" src="https://www.youtube.com/embed/5r7jZG6LL4E"></iframe>
-                        </div>
-                        <div class="news-info">
-                            <h2 class="news-info dark-color">Fight monsters in your sitting room with real playcenter balls.</h2>
-                            <h3 class="news-info dark-color">Mixed-Reality game for Android phones. Created in Unity.</h3>
-                        </div>
+        <section class="section w3-container w3-padding-48" style="margin-left:10px">
+            <div class="news-list">
+                <div class="row news-item jumbotron flex-row-reverse">
+                    <div class="col-md-8">
+                        <h3 class="dark-color">Fight monsters in your sitting room with real playcenter balls.</h3>
+                        <h3 class="dark-color">Mixed-Reality game for Android phones. Created in Unity.</h3>
                     </div>
-                    <div class="news-item">
-                        <div class="news-image">
-                            <iframe width="500" height="375" src="https://www.youtube.com/embed/iBbQOeq_ung"></iframe>
-                        </div>
-                        <div class="news-info dark-color">
-                            <h2 class="news-info dark-color">3D Cartoon animation.</h2>
-                            <h3 class="news-info dark-color">Becomes a desktop game at the end of the cartoon and lets user walk the cave.</h3>
-                            <h3 class="news-info dark-color">Animation created in Unity.</h3>
-</div>
+                    <div class="col-md-4 ">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/5r7jZG6LL4E"></iframe>
                     </div>
-                    <div class="news-item">
-                        <div class="news-image">
-                            <iframe width="500" height="375" src="https://www.youtube.com/embed/kT4DnLKY8w4"></iframe>
-                        </div>
-                        <div class="news-info dark-color">
-                            <h3 class="news-info">Example of Inverse Kinematics implemented with Jacobian method. C++.</h3>
-                        </div>
+                </div>
+                <div class="row news-item jumbotron">
+                    <div class="col-md-8">
+                        <h3 class="dark-color">3D Cartoon animation.</h3>
+                        <h3 class="dark-color">Becomes a desktop game at the end of the cartoon and lets user walk the cave.</h3>
+                        <h3 class="dark-color">Animation created in Unity.</h3>
                     </div>
-                    <div class="news-item">
-                        <div class="news-image">
-                            <iframe width="500" height="375" src="https://www.youtube.com/embed/LcTmf0bgTQo"></iframe> <!--"https://www.youtube.com/embed/LjkJrDkJwyg" or "WnvZASPZGfc""-->
-                        </div>
-                        <div class="news-info dark-color">
-                            <h3 class="news-info">Face animation using Blend-shapes. Desktop C++ project.</h3>
-                        </div>
+                    <div class="col-md-4">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/iBbQOeq_ung"></iframe>
+                    </div>
+                </div>
+                <div class="row news-item jumbotron flex-row-reverse">
+                    <div class="col-md-8">
+                        <h3>Example of Inverse Kinematics implemented with Jacobian method. C++.</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/kT4DnLKY8w4"></iframe>
+                    </div>
+                </div>
+                <div class="row news-item jumbotron">
+                    <div class="col-md-8">
+                        <h3>Face animation using Blend-shapes. Desktop C++ project.</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/LcTmf0bgTQo"></iframe> <!--"https://www.youtube.com/embed/LjkJrDkJwyg" or "WnvZASPZGfc""-->
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Footer -->
-        <footer class="w3-container w3-dark-grey" style="padding:32px">
-            <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-        </footer>
     </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey" style="padding:32px">
+        <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>Powered by bootstrap, <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
 </body>
