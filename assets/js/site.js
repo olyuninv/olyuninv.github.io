@@ -7,6 +7,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 //import { MTLLoader } from 'three/addons/loaders/MTLLoader';
 //import { OBJLoader } from 'three/addons/loaders/OBJLoader';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+//import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 //import Stats from 'three/addons/libs/stats.module'
 
 // Write your JavaScript code.
@@ -30,6 +31,23 @@ init();
 animate();
 
 function init() {
+
+    var manager = new THREE.LoadingManager();
+    manager.onStart = function (url, itemsLoaded, itemsTotal) {
+        console.log('Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+    };
+
+    manager.onLoad = function () {
+        console.log('Loading complete!');
+    };
+
+    manager.onProgress = function (url, itemsLoaded, itemsTotal) {
+        console.log('Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+    };
+
+    manager.onError = function (url) {
+        console.log('There was an error loading ' + url);
+    };
 
     //container = document.createElement('div');
     //document.body.appendChild(container);
@@ -55,8 +73,12 @@ function init() {
     scene.add(light)    
 
     /* Model */
+    //const loader = new DRACOLoader(manager);
+    //loader.setDecoderPath('three/addons/libs/draco/');
+    //loader.preload();
 
-    var loader = new GLTFLoader();
+
+    const loader = new GLTFLoader(manager);
     loader.load('assets/images/vologram_20.glb', function (gltf) {
         var model = gltf.scene;
         model.position.y -= 1;
